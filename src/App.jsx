@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
+import { Routes, Route } from 'react-router-dom';
+
 import './App.css';
 
 function App() {
@@ -7,7 +8,12 @@ function App() {
 
   return (
     <div className="App">
-      <h2>This is the homepage for ontime app</h2>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Register />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
     </div>
   );
 }
