@@ -1,7 +1,7 @@
 import React from 'react';
-import { useTitle } from 'utils/useTitle';
+import { useTitle } from '../../utils/useTitle';
 
-export function NotFound() {
+function Error404() {
   useTitle('| 404');
 
   return (
@@ -14,3 +14,5 @@ export function NotFound() {
     </div>
   );
 }
+
+export { Error404 };
